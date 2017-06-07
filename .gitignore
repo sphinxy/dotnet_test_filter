@@ -1,0 +1,17 @@
+# Visual studio
+.vs/
+*.user
+artifacts/
+bin/
+obj/
+project.lock.json
+launchSettings.json
+
+# VS Code
+.vscode/
+
+# Resolved by bower/npm
+**/node_modules/
+
+# to have local overrides without using environment variables
+appsettings.local.json
