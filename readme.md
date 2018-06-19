@@ -25,10 +25,12 @@ We expect the test runner to run any tests that are not decorated with `[Trait("
 
 This repository contains two projects: Fast and Slow.
 
-The Fast project contains a single tests with now trait decoration.
+The Fast project contains a single tests without trait decoration.
 
 The Slow repository contains one test and one theory. The theory is decorated with `[Trait("Category", "Slow")]`.
 
 If we run `dotnet test --filter Category!=Slow` on the slow assembly then the test that does not have this trait is executed successfully (which is what we'd expect, since it doesn't match the exclusion filter). However running the same on the fast assembly produces an error.
 
 ![Example test run](./slow_filter.png)
+
+Related issue: https://github.com/xunit/xunit/issues/1314
