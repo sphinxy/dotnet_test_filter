@@ -1,3 +1,9 @@
+#Update 2018
+
+After updating to Microsoft.NET.Test.Sdk >=15.5 error is gone. Related discussions: 
+https://github.com/xunit/xunit/issues/1314
+https://github.com/Microsoft/vstest/pull/845
+
 # Overview
 
 This is a minimal sample to demonstrate an issue with the dotnet test tooling when using `--filter` to exclude xunit tests with a particular trait using dotnet version 1.0.3 and xunit 2.2.0.
@@ -32,5 +38,3 @@ The Slow repository contains one test and one theory. The theory is decorated wi
 If we run `dotnet test --filter Category!=Slow` on the slow assembly then the test that does not have this trait is executed successfully (which is what we'd expect, since it doesn't match the exclusion filter). However running the same on the fast assembly produces an error.
 
 ![Example test run](./slow_filter.png)
-
-Related issue: https://github.com/xunit/xunit/issues/1314
